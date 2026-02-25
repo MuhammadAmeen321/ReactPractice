@@ -1,22 +1,25 @@
 
 import './App.css';
+import React from 'react';
+import Newcomponent from './components/Newcomponent';
 
-// import Component from "./component";
-// import MyComponent from './click';
-import Classprops from './classprops';
 
-function App() {
-  return (
-    <div>
-    <h1>Hello welcome to react practice</h1>
-    {/* <Component/>
-    <MyComponent/> */}
-    <Classprops name='1'/>
-    <Classprops name='2'/>
-    </div>
-  );
+class App extends React.Component{
+
+styles={
+  fontStyle: 'bold',
+  color: 'teal'
+};
+
+  render(){
+    return (
+      <div className='App'>
+        <h1 style={this.styles}> Welcome</h1>
+        <Newcomponent/>
+      </div>
+    )
+  }
 }
-
 export default App;
 
 
